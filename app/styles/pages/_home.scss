@@ -1,0 +1,10 @@
+.homepage-content {
+  .copy-body{
+    font-weight: 300;
+    width: auto;
+    margin: 20px auto;
+    @include respond-to(medium) {
+      margin: 65px auto 30px auto;
+    }
+  }
+}

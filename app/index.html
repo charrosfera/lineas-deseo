@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      window.App = {};
+    </script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="app" class="wrapper"></div>
+
+    <!-- build:js scripts/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/backbone.wreqr/lib/backbone.wreqr.js"></script>
+    <script src="bower_components/marionette/lib/backbone.marionette.js"></script>
+    <script src="bower_components/jQuery-Storage-API/jquery.storageapi.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/main.js -->
+    <script src="scripts/overrides.js"></script>
+    <script src="templates/compiled.js"></script>
+
+    <!-- Views -->
+    <script src="scripts/views/home.js"></script>
+    <script src="scripts/views/header.js"></script>
+
+    <!-- Models -->
+    <script src="scripts/models/model.js"></script>
+    <!-- Collections -->
+    <!-- <script src="scripts/collections/collection.js"></script> -->
+
+    <!-- Main Files -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/router.js"></script>
+    <script src="scripts/main.js"></script>
+
+
+    <!-- endbuild -->
+  </body>
+</html>

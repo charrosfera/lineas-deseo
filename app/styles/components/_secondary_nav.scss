@@ -1,0 +1,41 @@
+.secondary-nav {
+  background-color: $dark-gray;
+  padding: 17px 30px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.secondary-nav--label {
+  float: left;
+  color: $light-gray;
+}
+
+.secondary-nav--item, .secondary-nav--menu {
+  float: left;
+}
+
+.secondary-nav--item {
+  &:first-child .secondary-nav--link {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+
+.secondary-nav--link {
+  display: block;
+  padding: 0px 5px;
+  position: relative;
+  &.is-active{
+    color: $white;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    border-left: 1px solid $light-gray;
+    height: 10px;
+    top: 1px;
+    left: 0px;
+  }
+}

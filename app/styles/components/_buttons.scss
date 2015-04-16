@@ -1,0 +1,40 @@
+.btn{
+  @include box-shadow(inset 0px 0px 1px 0px rgba(255,255,255,0.7));
+  @include single-transition(all, 150ms, ease-in);
+  font-size: 18px;
+  border-radius: 3px;
+  border: 0;
+  color: $button-gray;
+  cursor: pointer;
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  padding: 20px 0;
+  text-transform: uppercase;
+  width: 100%;
+  &.btn-blue{
+    background-color: $app-blue;
+    &:hover{
+      background-color: $white;
+    }
+  }
+  &.btn-transparent{
+    @include box-shadow(inset 0px 0px 0px 2px $app-blue);
+    background-color: transparent;
+    color: $app-blue;
+    &:hover{
+      @include box-shadow(inset 0px 0px 0px 2px $white);
+      color: $white;
+    }
+  }
+}
+
+.btn-block{
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+  @include respond-to(medium){
+    width: 215px;
+    margin: 0 10px;
+  }
+}

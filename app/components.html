@@ -1,0 +1,229 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="wrapper">
+
+      <header class="header">
+        <h1 class="copy-h1">
+          Components
+        </h1>
+      </header>
+
+      <section class="content">
+        <div class="row centered">
+          <h2 class="copy-h2">Buttons</h2>
+          <button class="btn btn-blue">Empezar</button>
+          <button class="btn btn-transparent">Empezar</button>
+        </div>
+
+        <hr class="separator">
+
+        <div class="row centered">
+          <h2 class="copy-h2">Progress bar</h2>
+
+          <div class="row">
+            <div class="progress-bar--block">
+              <span class="progress-bar--label">
+                Pregunta <strong>4</strong> de 10
+              </span>
+              <progress class="progress-bar progress-bar__green" max="100" value="80">
+                <div class="progress-bar progress-bar__green">
+                  <span style="width: 80%;">Progress: 80%</span>
+                </div>
+              </progress>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="progress-bar--block">
+              <span class="progress-bar--label">
+                Pregunta <strong>4</strong> de 10
+              </span>
+              <progress class="progress-bar progress-bar__yellow" max="100" value="80">
+                <div class="progress-bar progress-bar__green">
+                  <span style="width: 80%;">Progress: 80%</span>
+                </div>
+              </progress>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="progress-bar--block">
+              <span class="progress-bar--label">
+                Pregunta <strong>4</strong> de 10
+              </span>
+              <progress class="progress-bar progress-bar__red" max="100" value="80">
+                <div class="progress-bar progress-bar__green">
+                  <span style="width: 80%;">Progress: 80%</span>
+                </div>
+              </progress>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <hr class="separator">
+
+        <div class="row centered">
+          <h2 class="copy-h2">Radio Buttons</h2>
+          <a href="#" class="radio-button radio-button__green">
+            <span class="fa fa-check radio-button--icon"></span>
+          </a>
+          <a href="#" class="radio-button radio-button__red">
+            <span class="fa fa-times radio-button--icon"></span>
+          </a>
+          <a href="#" class="radio-button radio-button__red is-active">
+            <span class="radio-button--icon fa fa-times"></span>
+          </a>
+        </div>
+
+        <div class="row centered">
+          <h2 class="copy-h2">Radio Button with label</h2>
+          <div class="row">
+            <div class="radio-button-block">
+              <a href="#" class="radio-button radio-button__green">
+                <span class="fa fa-check radio-button--icon"></span>
+              </a>
+              <span class="radio-button--label">
+                Una opción
+              </span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="radio-button-block is-active">
+              <a href="#" class="radio-button radio-button__green">
+                <span class="fa fa-check radio-button--icon"></span>
+              </a>
+              <span class="radio-button--label">
+                Otra opción
+              </span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="radio-button-block is-active">
+              <a href="#" class="radio-button radio-button__red">
+                <span class="fa fa-times radio-button--icon"></span>
+              </a>
+              <span class="radio-button--label">
+                25
+              </span>
+              <span class="radio-button--sub-label">
+                - La respuesta correcta era 7
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row centered">
+          <h2 class="copy-h2">Radio Button Group</h2>
+          <div class="row">
+            <div class="radio-button-group">
+              <div class="radio-button-block">
+                <a href="#" class="radio-button radio-button__green">
+                  <span class="fa fa-check radio-button--icon"></span>
+                </a>
+                <span class="radio-button--label">
+                  10
+                </span>
+              </div>
+              <div class="radio-button-block">
+                <a href="#" class="radio-button radio-button__green">
+                  <span class="fa fa-check radio-button--icon"></span>
+                </a>
+                <span class="radio-button--label">
+                  30
+                </span>
+              </div>
+              <div class="radio-button-block is-active">
+                <a href="#" class="radio-button radio-button__green">
+                  <span class="fa fa-check radio-button--icon"></span>
+                </a>
+                <span class="radio-button--label">
+                  50
+                </span>
+              </div>
+              <div class="radio-button-block">
+                <a href="#" class="radio-button radio-button__green">
+                  <span class="fa fa-check radio-button--icon"></span>
+                </a>
+                <span class="radio-button--label">
+                  100
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <hr class="separator">
+
+        <div class="row centered">
+          <h2 class="copy-h2">Secondary Nav</h2>
+
+          <nav class="secondary-nav">
+            <span class="secondary-nav--label">Ordenado por:</span>
+            <ul class="secondary-nav--menu">
+              <li class="secondary-nav--item"><a class="secondary-nav--link is-active" href="#">Ascendente</a></li>
+              <li class="secondary-nav--item"><a class="secondary-nav--link" href="#">Descendente</a></li>
+              <li class="secondary-nav--item"><a class="secondary-nav--link" href="#">Correctas</a></li>
+              <li class="secondary-nav--item"><a class="secondary-nav--link" href="#">Incorrectas</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/backbone.wreqr/lib/backbone.wreqr.js"></script>
+    <script src="bower_components/marionette/lib/backbone.marionette.js"></script>
+    <script src="bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/main.js -->
+    <script src="scripts/overrides.js"></script>
+    <script src="templates/compiled.js"></script>
+    <script src="scripts/views/header.view.js"></script>
+    <script src="scripts/views/layout.view.js"></script>
+    <script src="scripts/views/homepage.view.js"></script>
+    <script src="scripts/views/button.view.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

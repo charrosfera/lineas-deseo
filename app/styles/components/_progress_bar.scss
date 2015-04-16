@@ -1,0 +1,99 @@
+.progress-bar--block {
+  display: inline-block;
+  width: auto;
+  @include respond-to(medium){
+    width: 400px;
+  }
+}
+
+.progress-bar {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  /* Get rid of default border in Firefox. */
+  border: none;
+
+  width: 100%;
+  height: 20px;
+  background-color: $dark-gray;
+  border-radius: 10px;
+
+  &::-webkit-progress-bar {
+    background-color: $dark-gray;
+    border-radius: 10px;
+    padding: 3px;
+  }
+  &::-webkit-progress-value {
+    @include single-transition(background-color, 1000ms, ease-in);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-size: 35px;
+  }
+  &::-moz-progress-bar{
+    @include single-transition(background-color, 1000ms, ease-in);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-size: 35px;
+  }
+  span{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+    display: block;
+  }
+
+  &[value="3000"]{
+    &::-webkit-progress-value {
+      border-radius: 10px;
+    }
+    &::-moz-progress-bar{
+      border-radius: 10px;
+    }
+  }
+
+
+  &.progress-bar__green{
+    &::-webkit-progress-value {
+      background-color: $app-green;
+    }
+    &::-moz-progress-bar{
+      background-color: $app-green;
+    }
+    span{
+      background-color: $app-green;
+    }
+  }
+  &.progress-bar__yellow{
+    &::-webkit-progress-value {
+      background-color: $app-yellow;
+    }
+    &::-moz-progress-bar {
+      background-color: $app-yellow;
+    }
+    span{
+      background-color: $app-yellow;
+    }
+  }
+  &.progress-bar__red{
+    &::-webkit-progress-value {
+      background-color: $app-red;
+    }
+    &::-moz-progress-bar {
+      background-color: $app-red;
+    }
+    span{
+      background-color: $app-red;
+    }
+  }
+}
+
+.progress-bar--label {
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 18px;
+  font-weight: 300;
+}

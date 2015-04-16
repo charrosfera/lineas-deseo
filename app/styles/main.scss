@@ -1,0 +1,38 @@
+@import 'variables';
+@import 'utilities';
+
+@import 'compass/css3/box-shadow';
+@import "compass/css3/transition";
+
+@import 'icons/font-awesome';
+@import 'fonts';
+
+@import 'reset';
+@import 'layout';
+@import 'copy';
+
+@import 'components/buttons';
+@import 'components/radio_buttons';
+@import 'components/progress_bar';
+@import 'components/secondary_nav';
+
+@import 'pages/home';
+
+/* Space out content a bit */
+body {
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+    background-color: $body-gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a {
+  @include single-transition(all, 100ms, ease-in);
+  color: $app-blue;
+  text-decoration: none;
+  &:hover{
+    color: lighten( $app-blue, 15% );
+    text-decoration: none;
+  }
+}
