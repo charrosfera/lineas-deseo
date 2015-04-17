@@ -9,14 +9,17 @@ App.Views = App.Views || {};
     template: templates.map,
 
     regions: {
+      header: '#header',
       content: '#content'
     },
 
     events: {
-      'click #btn-stop': 'onClickStop'
+      'click #btn-stop': 'onClickStop',
+      'click .js-btn-back': 'onClickStop'
     },
 
     initialize: function() {
+      $('body').removeClass().addClass("body-home");
       this.model = new App.Models.GeoLocation();
       this.listenTo(this.model, 'gelocation:save-point', this.createPolyline.bind(this));
     },
@@ -24,19 +27,23 @@ App.Views = App.Views || {};
     onShow: function() {
 
       var mapOptions = {
-        center: new google.maps.LatLng(-34.397, 150.644),
+        center: new google.maps.LatLng(40.9660954,-5.6804497),
         zoom: 8,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 
       this.map = new google.maps.Map(document.getElementById('map'),
             mapOptions);
-      this.map.setZoom(18);
+      this.map.setZoom(10);
+
+      this.header.show(new App.Views.Header({
+        title: 'map'
+      }));
 
     },
 
     onClickStop: function() {
-      App.Router.navigate('', { trigger: true });
+      App.Router.navigate('inicio', { trigger: true });
 
       this.model.save({},
       {
@@ -62,14 +69,15 @@ App.Views = App.Views || {};
       var lineaDeseo = new google.maps.Polyline({
         path: positionsArray,
         geodesic: true,
-        strokeColor: '#FF0000',
+        strokeColor: '#f18700',
         strokeOpacity: 1.0,
-        strokeWeight: 2
+        strokeWeight: 6
       });
       lineaDeseo.setMap(this.map);
 
-      var lastPoint = new google.maps.LatLng(point.lat,point.lng);
+      var lastPoint = new google.maps.LatLng(point.latitude,point.longitude);
       this.map.setCenter(lastPoint);
+      this.map.setZoom(17);
 
     }
 
