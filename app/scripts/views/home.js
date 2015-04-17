@@ -18,7 +18,6 @@ App.Views = App.Views || {};
     },
 
     initialize: function() {
-      this.model = new App.Models.GeoLocation();
       App.Events.on('gelocation:update-line', function(data){
         $('#txt-debug-position').val(JSON.stringify(data));
       });

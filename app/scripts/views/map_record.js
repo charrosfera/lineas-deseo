@@ -37,21 +37,27 @@ App.Views = App.Views || {};
 
     onClickStop: function() {
       App.Router.navigate('', { trigger: true });
-      App.Events.trigger('gelocation:update-line', this.model.get('points'));
+
+      this.model.save({},
+      {
+        url: 'http://grial3.usal.es:1935/routes/?format=json',
+        success: function( response ) {
+            console.log( 'Exito:' + response );
+        },
+        error: function( response ) {
+            console.log( 'Error:' + response );
+        }
+      });
+
+      App.Events.trigger('gelocation:update-line', this.model.get('position'));
     },
 
     createPolyline: function(point){
 
       var positionsArray = [];
-      _.each(this.model.get('points'), function(point){
+      _.each(this.model.get('position'), function(point){
         positionsArray.push(new google.maps.LatLng(point.lat,point.lng));
       });
-
-      // new google.maps.Marker({
-      //   position: myLatlng,
-      //   map: this.map
-      // });
-      //
 
       var lineaDeseo = new google.maps.Polyline({
         path: positionsArray,
