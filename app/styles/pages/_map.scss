@@ -1,4 +1,13 @@
 .map{
+  position: absolute !important;
   width: 100%;
-  height: 600px;
+  height: 100%;
+  z-index: 10;
+}
+.btn-over-map{
+  position: absolute;
+  z-index: 15;
+  bottom: 20px;
+  width: 50%;
+  margin-left: 25%;
 }
