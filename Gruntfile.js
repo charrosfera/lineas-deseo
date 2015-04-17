@@ -256,7 +256,7 @@ module.exports = function (grunt) {
               authKey: 'key1'
             },
             src: '<%= yeoman.dist %>',
-            dest: '<%= yeoman.appName %>',
+            dest: '/',
             exclusions: []
           }
         }
