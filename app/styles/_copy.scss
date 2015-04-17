@@ -1,15 +1,12 @@
 .copy-h1 {
-  font-size: 30px;
+  font-size: 15px;
   color: $white;
   text-transform: uppercase;
   @include respond-to(medium) {
-    font-size: 50px;
+    font-size: 20px;
   }
   @include respond-to(large) {
-    font-size: 60px;
-  }
-  @include respond-to(x-large) {
-    font-size: 72px;
+    font-size: 30px;
   }
 }
 

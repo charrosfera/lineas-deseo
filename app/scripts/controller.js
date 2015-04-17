@@ -1,4 +1,4 @@
-/* global App */
+/* global  App */
 
 (function () {
   'use strict';
@@ -7,11 +7,26 @@
     routeIndex: function(){
 
       var homepageView;
-
       homepageView = new App.Views.Homepage();
       App.Main.mainRegion.show(homepageView);
-      $.localStorage.remove('App::App::Game');
 
+      new App.Models.GeoLocation();
+
+    },
+
+    routeInfo: function() {
+      var infoPage = new App.Views.Info();
+      App.Main.mainRegion.show(infoPage);
+    },
+
+    routeInitPage: function() {
+      var startPage = new App.Views.Start();
+      App.Main.mainRegion.show(startPage);
+    },
+
+    routeMapRecord: function() {
+      var mapRecordPage = new App.Views.MapRecord();
+      App.Main.mainRegion.show(mapRecordPage);
     }
 
   };

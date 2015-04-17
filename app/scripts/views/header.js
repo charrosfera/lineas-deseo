@@ -10,7 +10,8 @@ App.Views = App.Views || {};
     serializeData: function() {
       return {
         'title': this.options.title || 'App',
-        'subtitle': this.options.subtitle || 'Empezando con la aplicación'
+        'subtitle': this.options.subtitle || '',
+        'logo': this.options.logo || ''
       };
     }
   });

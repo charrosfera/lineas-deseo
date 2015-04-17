@@ -46,3 +46,10 @@
     @content;
   }
 }
+
+
+@mixin vertical-align($height: 0) {
+  height: $height;
+  display: table-cell;
+  vertical-align: middle;
+}

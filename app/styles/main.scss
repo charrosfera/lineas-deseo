@@ -3,28 +3,30 @@
 
 @import 'compass/css3/box-shadow';
 @import "compass/css3/transition";
+@import "compass/utilities/general/clearfix";
 
 @import 'icons/font-awesome';
 @import 'fonts';
 
 @import 'reset';
+@import 'grid';
 @import 'layout';
 @import 'copy';
 
 @import 'components/buttons';
-@import 'components/radio_buttons';
-@import 'components/progress_bar';
-@import 'components/secondary_nav';
+// @import 'components/radio_buttons';
+// @import 'components/progress_bar';
+// @import 'components/secondary_nav';
+@import 'components/navigation_bar';
 
 @import 'pages/home';
+@import 'pages/map';
 
 /* Space out content a bit */
 body {
     font-family: 'Proxima Nova';
     font-size: 14px;
     background-color: $body-gray;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 a {

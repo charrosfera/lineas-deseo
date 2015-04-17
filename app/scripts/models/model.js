@@ -6,22 +6,35 @@ App.Models = App.Models || {};
     'use strict';
 
     App.Models.GeoLocation = Backbone.Model.extend({
+        defaults:{
+          points: [],
+          timestamp: new Date().getTime()
+        },
+
         initialize: function(){
+
           window.setInterval( this.getLocation.bind(this), 1000);
         },
         getLocation: function(){
-          var that = this;
+
+          var array = this.get('points');
+
           if (navigator.geolocation){
               navigator.geolocation.getCurrentPosition(function(position){
-                  that.set('lat', position.coords.latitude);
-                  that.set('lng', position.coords.longitude);
-              });
-          }else{
-              that.set('lat', 0);
-              that.set('lng', 0);
+                  array.push({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                    date: new Date().getTime()
+                  });
+              }.bind(this));
           }
 
-          console.log('Location: ' + this.get('lat') + ' - ' + this.get('lng'));
+          this.set('points', array);
+
+          $.localStorage.set('App::LineaDeseo:' + this.get('timestamp'), {
+            points: array
+          });
+
          },
     });
 
