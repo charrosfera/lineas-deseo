@@ -18,6 +18,8 @@ App.Views = App.Views || {};
     },
 
     initialize: function() {
+      $('body').removeClass().addClass("body-home");
+
       App.Events.on('gelocation:update-line', function(data){
         $('#txt-debug-position').val(JSON.stringify(data));
       });

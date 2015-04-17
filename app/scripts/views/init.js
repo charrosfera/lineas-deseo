@@ -9,13 +9,13 @@ App.Views = App.Views || {};
     template: templates.init,
 
     initialize: function() {
-      $('body').removeClass().addClass("body-init")
+      $('body').removeClass().addClass("body-init");
     },
 
     onShow: function() {
-      // window.setTimeout(function(){
-      //   App.Router.navigate('inicio', { trigger: true });
-      // }, 5000);
+      window.setTimeout(function(){
+        App.Router.navigate('inicio', { trigger: true });
+      }, 1500);
     }
 
 
