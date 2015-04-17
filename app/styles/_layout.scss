@@ -1,3 +1,30 @@
+html{
+  height: 100%;
+}
+/* Space out content a bit */
+body {
+    font-family: 'Aller_Bd';
+    font-size: 14px;
+    height: 100%;
+    &.body-init{
+      background-color: $app-blue ;
+      background: url('/images/bg-init.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+}
+
+a {
+  @include single-transition(all, 100ms, ease-in);
+  color: $app-blue;
+  text-decoration: none;
+  &:hover{
+    color: lighten( $app-blue, 15% );
+    text-decoration: none;
+  }
+}
+
+
 .logo-app{
   float: left;
   height: 50px;
@@ -7,11 +34,17 @@
   margin-bottom: 50px;
   margin-top: 50px;
 }
+.logo-app-init{
+  margin-bottom: 50px;
+  margin-top: 150px;
+}
+
 
 .wrapper{
   padding: 0px 20px;
   margin: auto;
   max-width: 575px;
+  height: 100%;
 }
 
 .header{
@@ -19,13 +52,6 @@
   padding: 10px 0;
   text-align: center;
   border-bottom: 1px solid white;
-  @include respond-to(medium) {
-    padding: 30px 0;
-  }
-  @include respond-to(large) {
-    padding: 100px 0 60px 0;
-  }
-
   .copy-h1{
     @include vertical-align(50px);
   }

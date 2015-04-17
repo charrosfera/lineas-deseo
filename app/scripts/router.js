@@ -6,10 +6,11 @@
   App.Router = new Marionette.AppRouter({
     controller: App.Controller,
     appRoutes: {
-      ''              : 'routeIndex',
-      'informacion'   : 'routeInfo',
+      ''               : 'routeInit',
+      'inicio'         : 'routeIndex',
+      'informacion'    : 'routeInfo',
       'como-te-mueves' : 'routeInitPage',
-      'guardando-ruta': 'routeMapRecord'
+      'guardando-ruta' : 'routeMapRecord'
     }
   });
 

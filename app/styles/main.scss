@@ -21,20 +21,3 @@
 
 @import 'pages/home';
 @import 'pages/map';
-
-/* Space out content a bit */
-body {
-    font-family: 'Proxima Nova';
-    font-size: 14px;
-    background-color: $app-blue;
-}
-
-a {
-  @include single-transition(all, 100ms, ease-in);
-  color: $app-blue;
-  text-decoration: none;
-  &:hover{
-    color: lighten( $app-blue, 15% );
-    text-decoration: none;
-  }
-}

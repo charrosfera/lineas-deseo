@@ -6,12 +6,16 @@
   App.Events = _.extend({}, Backbone.Events);
 
   App.Controller = {
-    routeIndex: function(){
+    routeInit: function() {
+      var initPageView;
+      initPageView = new App.Views.Init();
+      App.Main.mainRegion.show(initPageView);
+    },
 
+    routeIndex: function(){
       var homepageView;
       homepageView = new App.Views.Homepage();
       App.Main.mainRegion.show(homepageView);
-
     },
 
     routeInfo: function() {
