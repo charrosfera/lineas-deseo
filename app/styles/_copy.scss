@@ -1,7 +1,7 @@
 .copy-h1 {
   font-size: 15px;
   color: $white;
-  text-transform: uppercase;
+  font-family: 'Aller_Lt';
   @include respond-to(medium) {
     font-size: 20px;
   }
@@ -16,6 +16,7 @@
   color: $white;
   text-transform: uppercase;
   font-weight: normal;
+  font-family: 'Aller_Lt';
   @include respond-to(medium) {
     position: relative;
     top: -9px;
@@ -27,9 +28,10 @@
 }
 
 .copy-h3 {
-  font-size: 20px;
+  font-size: 30px;
   color: $white;
   font-weight: normal;
+  font-family: 'Aller_Lt';
   @include respond-to(medium) {
     font-size: 25px;
   }
@@ -42,6 +44,7 @@
   color: $white;
   font-size: 14px;
   line-height: 20px;
+  font-family: 'Aller_Lt';
   @include respond-to(medium) {
     font-size: 16px;
   }

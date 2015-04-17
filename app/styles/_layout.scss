@@ -17,6 +17,11 @@ body {
       background-size: cover;
       background-repeat: no-repeat;
     }
+    &.body-start{
+      background: url('/images/bg-start.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
 }
 
 a {
@@ -46,7 +51,6 @@ a {
 
 
 .wrapper{
-  padding: 0px 20px;
   margin: auto;
   max-width: 575px;
   height: 100%;
@@ -54,18 +58,28 @@ a {
 
 .header{
   margin: auto;
-  padding: 10px 0;
   text-align: center;
-  border-bottom: 1px solid white;
+  background-color: white;
+  font-size: 18px;
+  .col-one-fifth{
+    border-right: 1px solid $app-blue;
+  }
+  i{
+    margin: 11px 0;
+  }
   .copy-h1{
-    @include vertical-align(50px);
+    padding: 10px 0;
+    margin-top: 3px;
+    color: $app-blue;
+    float: left;
+    font-family: 'Aller_Lt';
+    font-size: 20px;
   }
 }
 
 .row{
   display: inline-block;
   width: 100%;
-  margin-bottom: 5px;
   &.centered {
     text-align: center;
   }
@@ -86,4 +100,11 @@ a {
   &:hover, &:visited{
     color: rgba(white, 0.7);
   }
+}
+
+.start-buttons{
+  margin-top: 50px;
+}
+.start-title{
+  margin-top: 50px;
 }

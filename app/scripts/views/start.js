@@ -9,7 +9,8 @@ App.Views = App.Views || {};
     template: templates.start,
 
     events: {
-      'click .js-select-transport': 'onSelectTransport'
+      'click .js-select-transport': 'onSelectTransport',
+      'click .js-btn-back': 'goBack'
     },
 
     regions: {
@@ -17,10 +18,13 @@ App.Views = App.Views || {};
       content: '#content'
     },
 
+    initialize: function() {
+      $('body').removeClass().addClass("body-start");
+    },
+
     onShow: function() {
       this.header.show(new App.Views.Header({
-        title: 'Lineas de Deseo',
-        logo: 'images/delines-09.png'
+        title: 'delines'
       }));
     },
 
@@ -28,6 +32,11 @@ App.Views = App.Views || {};
       e.preventDefault();
 
       App.Router.navigate('guardando-ruta', { trigger: true });
+    },
+
+    goBack: function(e) {
+      e.preventDefault();
+      window.history.back();
     }
 
   });

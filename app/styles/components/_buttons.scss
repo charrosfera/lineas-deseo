@@ -6,7 +6,6 @@
   border: 0;
   color: $button-gray;
   cursor: pointer;
-  font-family: 'Proxima Nova';
   font-weight: 600;
   letter-spacing: 0.2em;
   padding: 15px 20px;
@@ -50,5 +49,16 @@
   @include respond-to(medium){
     width: 215px;
     margin: 0 10px;
+  }
+}
+
+.btn-start{
+  margin: 10px;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  i{
+    font-size: 50px;
+    margin-top: 14px;
   }
 }
