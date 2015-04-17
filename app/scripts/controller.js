@@ -10,8 +10,6 @@
       homepageView = new App.Views.Homepage();
       App.Main.mainRegion.show(homepageView);
 
-      new App.Models.GeoLocation();
-
     },
 
     routeInfo: function() {

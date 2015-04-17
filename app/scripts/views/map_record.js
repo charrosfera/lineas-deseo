@@ -16,8 +16,12 @@ App.Views = App.Views || {};
       'click #btn-stop': 'onClickStop'
     },
 
-    onShow: function() {
+    initialize: function() {
+      this.model = new App.Models.GeoLocation();
+      this.listenTo(this.model, 'gelocation:save-point', this.setMarker.bind(this));
+    },
 
+    onShow: function() {
 
       var mapOptions = {
         center: new google.maps.LatLng(-34.397, 150.644),
@@ -25,13 +29,26 @@ App.Views = App.Views || {};
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 
-      var map = new google.maps.Map(document.getElementById('map'),
+      this.map = new google.maps.Map(document.getElementById('map'),
             mapOptions);
 
     },
 
     onClickStop: function() {
       App.Router.navigate('', { trigger: true });
+    },
+
+    setMarker: function(point){
+
+      var myLatlng = new google.maps.LatLng(point.lat,point.lng);
+      new google.maps.Marker({
+        position: myLatlng,
+        map: this.map
+      });
+
+      this.map.setCenter(myLatlng);
+      this.map.setZoom(18);
+
     }
 
   });
