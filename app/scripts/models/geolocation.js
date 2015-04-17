@@ -22,10 +22,6 @@ App.Models = App.Models || {};
               navigator.geolocation.getCurrentPosition( this.savePoint.bind(this));
           }
 
-          // $.localStorage.set('App::LineaDeseo:' + this.get('timestamp'), {
-          //   points: array
-          // });
-
         },
 
         savePoint: function(position) {
@@ -37,6 +33,10 @@ App.Models = App.Models || {};
             lng: position.coords.longitude,
             date: new Date().getTime()
           };
+
+          $.localStorage.set('App::LineaDeseo:' + this.get('timestamp'), {
+            points: array
+          });
 
           array.push(point);
           this.set('points', array);

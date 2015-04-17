@@ -18,7 +18,7 @@ App.Views = App.Views || {};
 
     initialize: function() {
       this.model = new App.Models.GeoLocation();
-      this.listenTo(this.model, 'gelocation:save-point', this.setMarker.bind(this));
+      this.listenTo(this.model, 'gelocation:save-point', this.createPolyline.bind(this));
     },
 
     onShow: function() {
@@ -31,23 +31,39 @@ App.Views = App.Views || {};
 
       this.map = new google.maps.Map(document.getElementById('map'),
             mapOptions);
+      this.map.setZoom(18);
 
     },
 
     onClickStop: function() {
       App.Router.navigate('', { trigger: true });
+      App.Events.trigger('gelocation:update-line', this.model.get('points'));
     },
 
-    setMarker: function(point){
+    createPolyline: function(point){
 
-      var myLatlng = new google.maps.LatLng(point.lat,point.lng);
-      new google.maps.Marker({
-        position: myLatlng,
-        map: this.map
+      var positionsArray = [];
+      _.each(this.model.get('points'), function(point){
+        positionsArray.push(new google.maps.LatLng(point.lat,point.lng));
       });
 
-      this.map.setCenter(myLatlng);
-      this.map.setZoom(18);
+      // new google.maps.Marker({
+      //   position: myLatlng,
+      //   map: this.map
+      // });
+      //
+
+      var lineaDeseo = new google.maps.Polyline({
+        path: positionsArray,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      });
+      lineaDeseo.setMap(this.map);
+
+      var lastPoint = new google.maps.LatLng(point.lat,point.lng);
+      this.map.setCenter(lastPoint);
 
     }
 

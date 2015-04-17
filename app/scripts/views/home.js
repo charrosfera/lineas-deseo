@@ -18,6 +18,12 @@ App.Views = App.Views || {};
       content: '#content'
     },
 
+    initialize: function() {
+      App.Events.on('gelocation:update-line', function(data){
+        $('#txt-debug-position').val(JSON.stringify(data));
+      });
+    },
+
     onShow: function() {
       this.header.show(new App.Views.Header({
         title: 'Lineas de Deseo',

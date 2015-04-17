@@ -3,6 +3,8 @@
 (function () {
   'use strict';
 
+  App.Events = _.extend({}, Backbone.Events);
+
   App.Controller = {
     routeIndex: function(){
 
