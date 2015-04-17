@@ -332,4 +332,11 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.registerTask('deploy', [
+        'jshint',
+        'test',
+        'build',
+        'ftp-deploy'
+    ]);
 };
