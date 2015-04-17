@@ -8,19 +8,28 @@ App.Views = App.Views || {};
   App.Views.Info = Backbone.Marionette.LayoutView.extend({
     template: templates.info,
 
+    events: {
+      'click .js-btn-back': 'goBack'
+    },
+
     regions: {
       header: '#header',
-      navBar: '#nav-bar',
       content: '#content'
     },
 
-    onShow: function() {
-      this.navBar.show(new App.Components.NavigationBar());
+    initialize: function() {
+      $('body').removeClass().addClass("body-info");
+    },
 
+    onShow: function() {
       this.header.show(new App.Views.Header({
-        title: 'Lineas de Deseo',
-        logo: 'images/logo-big.png'
+        title: 'info'
       }));
+    },
+
+    goBack: function(e) {
+      e.preventDefault();
+      window.history.back();
     }
 
   });

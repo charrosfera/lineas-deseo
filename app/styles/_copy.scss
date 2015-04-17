@@ -42,14 +42,7 @@
 
 .copy-body {
   color: $white;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   font-family: 'Aller_Lt';
-  @include respond-to(medium) {
-    font-size: 16px;
-  }
-  @include respond-to(large) {
-    font-size: 18px;
-    line-height: 30px;
-  }
 }
