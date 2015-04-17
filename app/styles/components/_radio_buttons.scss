@@ -22,7 +22,7 @@
       float: none
     }
   }
-  @include respond-to(medium){
+  @include respond-to(medium) {
     &:nth-child(2n-1){
       .radio-button--link{
         float: right;

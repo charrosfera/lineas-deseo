@@ -12,7 +12,39 @@ App.Models = App.Models || {};
         },
 
         initialize: function(){
-          window.setInterval( this.getLocation.bind(this), 1000);
+
+          // this.save({
+
+          // }, {
+          //   url: "http://grial3.usal.es:1935/routes/",
+          //   dataType: "jsonp",
+          //   success: function(model, response) {
+          //     console.log(response)
+          //   },
+          //   error: function(a, b, c) {
+          //     console.log(a);
+          //     console.log(b);
+          //     console.log(c)
+          //   }
+          // });
+
+          // // Using YQL and JSONP
+          // $.ajax({
+          //     url: "http://grial3.usal.es:1935/routes/",
+          //     dataType: "jsonp",
+          //     type: "POST",
+          //     data: {
+          //         format: "json"
+          //     },
+          //     success: function( response ) {
+          //         console.log( response );
+          //     },
+          //     error: function( response ) {
+          //         console.log( response );
+          //     },
+          // });
+
+          // window.setInterval( this.getLocation.bind(this), 1000);
         },
         getLocation: function(){
 
@@ -30,8 +62,7 @@ App.Models = App.Models || {};
 
           var point = {
             lat: position.coords.latitude,
-            lng: position.coords.longitude,
-            date: new Date().getTime()
+            lng: position.coords.longitude
           };
 
           $.localStorage.set('App::LineaDeseo:' + this.get('timestamp'), {

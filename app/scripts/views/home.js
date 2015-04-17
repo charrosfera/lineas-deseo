@@ -14,21 +14,17 @@ App.Views = App.Views || {};
     },
 
     regions: {
-      header : '#header',
       content: '#content'
     },
 
     initialize: function() {
+      this.model = new App.Models.GeoLocation();
       App.Events.on('gelocation:update-line', function(data){
         $('#txt-debug-position').val(JSON.stringify(data));
       });
     },
 
     onShow: function() {
-      this.header.show(new App.Views.Header({
-        title: 'Lineas de Deseo',
-        logo: 'images/logo-big.png'
-      }));
     },
 
     onClickInfo: function(){

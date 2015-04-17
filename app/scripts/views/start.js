@@ -20,7 +20,7 @@ App.Views = App.Views || {};
     onShow: function() {
       this.header.show(new App.Views.Header({
         title: 'Lineas de Deseo',
-        logo: 'images/logo-big.png'
+        logo: 'images/delines-09.png'
       }));
     },
 

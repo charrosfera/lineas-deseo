@@ -27,6 +27,14 @@
       color: $white;
     }
   }
+  &.btn-white{
+    background-color: $white;
+    color: $app-blue;
+    &:hover{
+      background-color: rgba($white, 0.6);
+      color: $app-blue;
+    }
+  }
 }
 
 .btn-block{

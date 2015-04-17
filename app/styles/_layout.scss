@@ -1,5 +1,11 @@
 .logo-app{
+  float: left;
+  height: 50px;
+}
+.logo-app-home{
   max-width: 100%;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .wrapper{
@@ -12,11 +18,16 @@
   margin: auto;
   padding: 10px 0;
   text-align: center;
+  border-bottom: 1px solid white;
   @include respond-to(medium) {
     padding: 30px 0;
   }
   @include respond-to(large) {
     padding: 100px 0 60px 0;
+  }
+
+  .copy-h1{
+    @include vertical-align(50px);
   }
 }
 
@@ -37,4 +48,11 @@
 
 .separator {
   border-color: $medium-gray;
+}
+
+.lnk-white{
+  color: white;
+  &:hover, &:visited{
+    color: rgba(white, 0.7);
+  }
 }
