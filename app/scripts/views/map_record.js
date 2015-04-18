@@ -18,9 +18,11 @@ App.Views = App.Views || {};
       'click .js-btn-back': 'onClickStop'
     },
 
-    initialize: function() {
+    initialize: function(options) {
       $('body').removeClass().addClass('body-home');
-      this.model = new App.Models.GeoLocation();
+      this.model = new App.Models.GeoLocation({
+        transport: options.transport
+      });
       this.listenTo(this.model, 'gelocation:save-point', this.createPolyline.bind(this));
     },
 

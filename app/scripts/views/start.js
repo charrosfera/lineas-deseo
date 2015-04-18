@@ -31,7 +31,7 @@ App.Views = App.Views || {};
     onSelectTransport: function(e) {
       e.preventDefault();
 
-      App.Router.navigate('guardando-ruta', { trigger: true });
+      App.Router.navigate('guardando-ruta/' + $(e.currentTarget).attr('data-transport'), { trigger: true });
     },
 
     goBack: function(e) {

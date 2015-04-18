@@ -11,22 +11,27 @@ body {
       background: url('/images/bg-init.png');
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
     &.body-home{
       background: url('/images/bg-home.png');
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
     &.body-start{
       background: url('/images/bg-start.png');
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: bottom;
     }
 
     &.body-info{
       background: url('/images/bg-info.png');
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 }
 
@@ -113,16 +118,46 @@ a {
   margin-top: 50px;
 }
 .start-title{
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-.info-text{
-  margin: 50px 20px;
+.info-content{
+  .info-text{
+    font-size: 19px;
+    line-height: 23px;
+    margin: 50px 20px;
+    text-shadow: 0px 1px #111;
+  }
 }
 
+.success-content{
+  .info-text{
+    font-size: 19px;
+    line-height: 23px;
+    margin: 50px 20px;
+    text-shadow: 0px 1px #111;
+    text-align: justify;
+  }
+}
 
 .visualization-content{
   .copy-body{
     margin-top: 20px;
   }
+}
+
+.select-box{
+  width: 50%;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.lnk-white{
+  color: white;
+  font-family: 'Aller_Bd';
+  &:hover, &:active{
+    color: white;
+  }
+  font-size: 16px;
+  text-decoration: underline;
 }

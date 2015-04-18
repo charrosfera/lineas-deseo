@@ -1,4 +1,4 @@
-/* global App, templates */
+/* global App, templates, google */
 
 App.Views = App.Views || {};
 
@@ -31,7 +31,7 @@ App.Views = App.Views || {};
       this.bounds = new google.maps.LatLngBounds();
 
       _.each(this.collection.models, function(route) {
-        this.createPolyline(route.get("position"));
+        this.createPolyline(route.get('position'));
       }.bind(this));
 
       $('.js-count-lines').html('Hay ' + this.count + ' Lineas de Deseo guardadas');
@@ -79,8 +79,6 @@ App.Views = App.Views || {};
           strokeWeight: 10
         });
         lineaDeseo.setMap(this.map);
-
-        var lastPoint = new google.maps.LatLng(positions[positions.length-1].latitude,positions[positions.length-1].longitude);
 
         console.log('polyline');
       }

@@ -10,7 +10,7 @@
       'inicio'         : 'routeIndex',
       'informacion'    : 'routeInfo',
       'como-te-mueves' : 'routeInitPage',
-      'guardando-ruta' : 'routeMapRecord',
+      'guardando-ruta/:transport' : 'routeMapRecord',
       'visualizar-rutas': 'routeVisualize',
       'exito': 'routeSuccess',
     }

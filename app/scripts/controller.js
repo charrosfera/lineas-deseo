@@ -28,8 +28,10 @@
       App.Main.mainRegion.show(startPage);
     },
 
-    routeMapRecord: function() {
-      var mapRecordPage = new App.Views.MapRecord();
+    routeMapRecord: function(transport) {
+      var mapRecordPage = new App.Views.MapRecord({
+        transport: transport
+      });
       App.Main.mainRegion.show(mapRecordPage);
     },
 
