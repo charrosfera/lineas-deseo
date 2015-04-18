@@ -11,7 +11,8 @@
       'informacion'    : 'routeInfo',
       'como-te-mueves' : 'routeInitPage',
       'guardando-ruta' : 'routeMapRecord',
-      'visualizar-rutas': 'routeVisualize'
+      'visualizar-rutas': 'routeVisualize',
+      'exito': 'routeSuccess',
     }
   });
 

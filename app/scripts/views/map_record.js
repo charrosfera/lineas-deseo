@@ -43,7 +43,7 @@ App.Views = App.Views || {};
     },
 
     onClickStop: function() {
-      App.Router.navigate('inicio', { trigger: true });
+      App.Router.navigate('exito', { trigger: true });
 
       this.model.save({},
       {

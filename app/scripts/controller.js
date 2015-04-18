@@ -36,6 +36,11 @@
     routeVisualize: function() {
       var visualization = new App.Views.Visualization();
       App.Main.mainRegion.show(visualization);
+    },
+
+    routeSuccess: function() {
+      var success = new App.Views.Success();
+      App.Main.mainRegion.show(success);
     }
 
   };
