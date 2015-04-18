@@ -48,3 +48,6 @@ Para el tema de iconos, FontAwesome, que es una fuente de iconos. Ya la había u
 Para el manejo de localstorage he usado este plugin de jquery, sencillo y funcional. 
 
 
+## APP Backend
+El repositorio con el backend de la aplicación está disponible también en https://github.com/juan-cb/Delines-Backend
+El backend proporciona una API para obtener y guardar los datos de posicionamiento obtenidos desde este cliente. Este backend se ha desarrollado usando Django (https://www.djangoproject.com/), Django REST Framework (http://www.django-rest-framework.org/) y MySQL (https://www.mysql.com/). 
