@@ -13,7 +13,8 @@ App.Models = App.Models || {};
 
         initialize: function(){
 
-          window.setInterval( this.getLocation.bind(this), 1000);
+          this.getLocation();
+          window.setInterval( this.getLocation.bind(this), 3000);
         },
         getLocation: function(){
 

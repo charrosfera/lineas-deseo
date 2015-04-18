@@ -19,7 +19,7 @@ App.Views = App.Views || {};
     },
 
     initialize: function() {
-      $('body').removeClass().addClass("body-home");
+      $('body').removeClass().addClass('body-home');
       this.model = new App.Models.GeoLocation();
       this.listenTo(this.model, 'gelocation:save-point', this.createPolyline.bind(this));
     },
@@ -63,15 +63,15 @@ App.Views = App.Views || {};
 
       var positionsArray = [];
       _.each(this.model.get('position'), function(point){
-        positionsArray.push(new google.maps.LatLng(point.lat,point.lng));
+        positionsArray.push(new google.maps.LatLng(point.latitude,point.longitude));
       });
 
       var lineaDeseo = new google.maps.Polyline({
         path: positionsArray,
         geodesic: true,
-        strokeColor: '#f18700',
+        strokeColor: '#00AEA9',
         strokeOpacity: 1.0,
-        strokeWeight: 6
+        strokeWeight: 20
       });
       lineaDeseo.setMap(this.map);
 

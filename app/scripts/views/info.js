@@ -18,7 +18,7 @@ App.Views = App.Views || {};
     },
 
     initialize: function() {
-      $('body').removeClass().addClass("body-info");
+      $('body').removeClass().addClass('body-info');
     },
 
     onShow: function() {

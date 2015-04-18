@@ -219,7 +219,7 @@ module.exports = function (grunt) {
                     dest: '<%= yeoman.dist %>',
                     src: [
                         '*.{ico,txt}',
-                        'images/{,*/}*.{webp,gif}',
+                        'images/{,*/}*.{webp,gif,png}',
                         'styles/fonts/{,*/}*.*'
                     ]
                 }, {
@@ -241,7 +241,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
+                        // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
                         '/styles/fonts/{,*/}*.*',
                         'bower_components/sass-bootstrap/fonts/*.*'
                     ]
@@ -317,7 +317,7 @@ module.exports = function (grunt) {
         'hogan',
         'compass:dist',
         'useminPrepare',
-        'imagemin',
+        // 'imagemin',
         'htmlmin',
         'concat',
         'cssmin',

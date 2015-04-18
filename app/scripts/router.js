@@ -10,7 +10,8 @@
       'inicio'         : 'routeIndex',
       'informacion'    : 'routeInfo',
       'como-te-mueves' : 'routeInitPage',
-      'guardando-ruta' : 'routeMapRecord'
+      'guardando-ruta' : 'routeMapRecord',
+      'visualizar-rutas': 'routeVisualize'
     }
   });
 

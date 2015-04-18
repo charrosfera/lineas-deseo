@@ -31,6 +31,11 @@
     routeMapRecord: function() {
       var mapRecordPage = new App.Views.MapRecord();
       App.Main.mainRegion.show(mapRecordPage);
+    },
+
+    routeVisualize: function() {
+      var visualization = new App.Views.Visualization();
+      App.Main.mainRegion.show(visualization);
     }
 
   };

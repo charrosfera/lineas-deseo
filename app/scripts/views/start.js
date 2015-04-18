@@ -19,7 +19,7 @@ App.Views = App.Views || {};
     },
 
     initialize: function() {
-      $('body').removeClass().addClass("body-start");
+      $('body').removeClass().addClass('body-start');
     },
 
     onShow: function() {

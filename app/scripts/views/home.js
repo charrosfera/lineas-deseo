@@ -10,7 +10,8 @@ App.Views = App.Views || {};
 
     events: {
       'click #btn-info': 'onClickInfo',
-      'click #btn-start': 'onClickStart'
+      'click #btn-start': 'onClickStart',
+      'click #btn-visualization': 'onClickVisualization'
     },
 
     regions: {
@@ -18,7 +19,7 @@ App.Views = App.Views || {};
     },
 
     initialize: function() {
-      $('body').removeClass().addClass("body-home");
+      $('body').removeClass().addClass('body-home');
 
       App.Events.on('gelocation:update-line', function(data){
         $('#txt-debug-position').val(JSON.stringify(data));
@@ -34,6 +35,10 @@ App.Views = App.Views || {};
 
     onClickStart: function(){
       App.Router.navigate('como-te-mueves', { trigger: true });
+    },
+
+    onClickVisualization: function() {
+      App.Router.navigate('visualizar-rutas', { trigger: true });
     }
 
 

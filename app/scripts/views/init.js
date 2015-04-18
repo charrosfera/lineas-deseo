@@ -9,7 +9,7 @@ App.Views = App.Views || {};
     template: templates.init,
 
     initialize: function() {
-      $('body').removeClass().addClass("body-init");
+      $('body').removeClass().addClass('body-init');
     },
 
     onShow: function() {
